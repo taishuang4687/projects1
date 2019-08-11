@@ -96,13 +96,13 @@ export default {
             .then(res => {
               // 注册成功
               this.$message({
-                message: "注册成功！",
+                message: "您已注册成功！",
                 type: "success"
               });
               this.$router.push("/login");
             });
         } else {
-          console.log("error submit!!");
+          console.log("注册失败!!");
           return false;
         }
       });
