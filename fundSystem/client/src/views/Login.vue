@@ -2,7 +2,7 @@
   <div class="login">
     <section class="form_container">
       <div class="manage_tip">
-        <span class="title">米修在线后台管理系统</span>
+        <span class="title">TS资金后台管理系统</span>
       </div>
       <el-form
         :model="loginUser"

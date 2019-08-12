@@ -6,7 +6,11 @@ const passport = require('passport');
 const gravatar = require('gravatar');
 const keys = require('../../config/keys');
 const User = require('../../models/User');
-
+router.get('/test', (req, res) => {
+    res.json({
+        msg: 'profils works'
+    });
+});
 //注册
 router.post('/register', (req, res) => {
     User.findOne({ email: req.body.email }).then((user) => {
@@ -53,7 +57,7 @@ router.post('/login', (req, res) => {
                     id: user.id,
                     name: user.name,
                     avatar: user.avatar,
-                    identity: user.indentity
+                    identity: user.identity
                 }
                 jwt.sign(rule, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                     if (err) throw err;
