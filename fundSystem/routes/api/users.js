@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');//用于加密
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');//输出token值
 const passport = require('passport');
 const gravatar = require('gravatar');
 const keys = require('../../config/keys');
@@ -15,7 +15,7 @@ router.get('/test', (req, res) => {
 router.post('/register', (req, res) => {
     User.findOne({ email: req.body.email }).then((user) => {
         if (user) {
-            return res.status(404).json("邮箱已存在")
+            return res.status(404).json("邮箱已经存在")
         } else {
             const avatar = gravatar.url('req.body.email', { s: '200', r: 'pg', d: 'mm' });
             const newUser = new User({
@@ -66,7 +66,6 @@ router.post('/login', (req, res) => {
                         token: "Bearer " + token
                     })
                 })
-                // res.json({msg:'success'});
             } else {
                 return res.status(404).json('密码错误');
             }

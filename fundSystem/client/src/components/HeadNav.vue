@@ -1,34 +1,36 @@
 <template>
-  <header class="head-nav">
-    <el-row>
-      <el-col :span="6" class="logo-container">
-        <img src="../assets/logo.png" class="logo" alt />
-        <span class="title">米修在线后台管理系统</span>
-      </el-col>
-      <el-col :span="6" class="user">
-        <div class="userinfo">
-          <img :src="user.avatar" class="avatar" alt />
-          <div class="welcome">
-            <p class="name comename">欢迎</p>
-            <p class="name avatarname">{{user.name}}</p>
-          </div>
-          <span class="username">
-            <el-dropdown trigger="click" @command="setDialogInfo">
-              <span class="el-dropdown-link">
-                <i class="el-icon-caret-bottom el-icon--right"></i>
-              </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item command="info">个人信息</el-dropdown-item>
-                <el-dropdown-item command="logout">退出</el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
-          </span>
-        </div>
-      </el-col>
-    </el-row>
-  </header>
-</template>
+    <header class="head-nav">
+        <el-row>
+            <el-col :span="6" class='logo-container'>
+                <span class='title'>TS资金后台管理系统</span>
+            </el-col>
+            <el-col :span='6' class="user">
+                <div class="userinfo">
+                    <img :src="user.avatar" class='avatar' alt="">
+                     <div class='welcome'>
+                        <p class='name comename'>欢迎</p>
+                        <p class='name avatarname'>{{user.name}}</p>
+                    </div>
+                    <span class='username'>
+                        <el-dropdown
+                                trigger="click"
+                                @command='setDialogInfo'>
+                            <span class="el-dropdown-link">
+                                <i class="el-icon-caret-bottom el-icon--right"></i>
+                            </span>
+                            <el-dropdown-menu slot="dropdown">
+                                <el-dropdown-item command='info'>个人信息</el-dropdown-item>
+                                <el-dropdown-item  command='logout'>退出</el-dropdown-item>
+                            </el-dropdown-menu>
+                        </el-dropdown>
+                     </span>
+                </div>
+            </el-col>
 
+        </el-row>
+
+    </header>
+</template>
 <script>
 export default {
   name: "head-nav",
@@ -75,7 +77,7 @@ export default {
   height: 60px;
   min-width: 600px;
   padding: 5px;
-  background: #324057;
+  background: #112d3d;
   color: #fff;
   border-bottom: 1px solid #1f2d3d;
 }

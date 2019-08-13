@@ -1,17 +1,18 @@
 <template>
-  <div class="notfind">
-    <img src="../assets/404.gif" alt />
-  </div>
+    <div class="nofind">
+        <img src="../assets/404.gif" alt="">
+    </div>
 </template>
 
 <style scoped>
-.notfind {
+.nofind {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.notfind img{
+.nofind img {
   width: 100%;
   height: 100%;
 }
 </style>
+

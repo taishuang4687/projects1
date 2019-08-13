@@ -1,10 +1,10 @@
 <template>
-  <div class="home">
-    <div class="container">
-      <h1 class="title">TS资金后台管理系统</h1>
-      <p class="lead">专注于资金管理, 让您理财无忧,笔笔资金记录在账!</p>
+    <div class="home">
+        <div class="container">
+            <h1 class="title">TS资金后台管理系统</h1>
+            <p class="lead"> 专注于资金管理,让您放心理财,花费笔笔在账! </p>
+        </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
@@ -19,12 +19,12 @@
   height: 100%;
   box-sizing: border-box;
   padding-top: 100px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
   color: white;
 }
 .title {
-  font-size: 30px;
+  font-size: 25px;
 }
 .lead {
   margin-top: 50px;

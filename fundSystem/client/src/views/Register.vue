@@ -2,7 +2,7 @@
   <div class="register">
     <section class="form_container">
       <div class="manage_tip">
-        <span class="title">TS资金后台管理系统</span>
+        <span class="title">米修在线后台管理系统</span>
       </div>
       <el-form
         :model="registerUser"
@@ -26,7 +26,7 @@
         <el-form-item label="选择身份">
           <el-select v-model="registerUser.identity" placeholder="请选择身份">
             <el-option label="管理员" value="manager"></el-option>
-            <el-option label="个人" value="employee"></el-option>
+            <el-option label="员工" value="employee"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item>
@@ -40,7 +40,6 @@
 <script>
 export default {
   name: "register",
-  component: {},
   data() {
     var validatePass2 = (rule, value, callback) => {
       if (value !== this.registerUser.password) {
@@ -96,13 +95,13 @@ export default {
             .then(res => {
               // 注册成功
               this.$message({
-                message: "您已注册成功！",
+                message: "注册成功！",
                 type: "success"
               });
               this.$router.push("/login");
             });
         } else {
-          console.log("注册失败!!");
+          console.log("error submit!!");
           return false;
         }
       });
@@ -110,6 +109,7 @@ export default {
   }
 };
 </script>
+
 
 <style scoped>
 .register {
@@ -135,7 +135,6 @@ export default {
   font-size: 26px;
   color: #fff;
 }
-/* 注册表单部分 */
 .registerForm {
   margin-top: 20px;
   background-color: #fff;
@@ -148,3 +147,6 @@ export default {
   width: 100%;
 }
 </style>
+
+
+

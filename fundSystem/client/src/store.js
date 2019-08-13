@@ -34,14 +34,12 @@ const mutations = {
 }
 
 const actions = {
-  //授权信息
   setIsAutnenticated: ({ commit }, isAutnenticated) => {
     commit(types.SET_IS_AUTNENTIATED, isAutnenticated)
   },
   setUser: ({ commit }, user) => {
     commit(types.SET_USER, user)
   },
-  //清除当前状态
   clearCurrentState: ({ commit }) => {
     commit(types.SET_IS_AUTNENTIATED, false)
     commit(types.SET_USER, null)

@@ -1,33 +1,25 @@
 <template>
-  <div class="login">
-    <section class="form_container">
-      <div class="manage_tip">
-        <span class="title">TS资金后台管理系统</span>
-      </div>
-      <el-form
-        :model="loginUser"
-        :rules="rules"
-        ref="loginForm"
-        class="loginForm"
-        label-width="60px"
-      >
-        <el-form-item label="邮箱" prop="email">
-          <el-input v-model="loginUser.email" placeholder="请输入邮箱"></el-input>
-        </el-form-item>
-        <el-form-item label="密码" prop="password">
-          <el-input v-model="loginUser.password" placeholder="请输入密码" type="password"></el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登 录</el-button>
-        </el-form-item>
-        <div class="tiparea">
-          <p>
-            <router-link to="/register">立即注册</router-link>
-          </p>
-        </div>
-      </el-form>
-    </section>
-  </div>
+    <div class="login">
+        <section class="form_container">
+            <div class="manage_tip">
+                <span class="title">米修在线后台管理系统</span>
+            </div>
+            <el-form :model="loginUser" :rules="rules" ref="loginForm" class="loginForm" label-width="60px">
+                <el-form-item label="邮箱" prop="email">
+                    <el-input v-model="loginUser.email" placeholder="请输入邮箱"></el-input>
+                </el-form-item>
+                <el-form-item label="密码" prop="password">
+                    <el-input v-model="loginUser.password" placeholder="请输入密码" type="password"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary"  @click="submitForm('loginForm')" class="submit_btn">登  录</el-button>
+                </el-form-item>
+                <div class="tiparea">
+                    <p>还没有账号？现在<router-link to='/register'>注册</router-link></p>
+                </div>
+            </el-form>
+        </section>
+    </div>
 </template>
 
 <script>

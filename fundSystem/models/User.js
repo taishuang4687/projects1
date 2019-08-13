@@ -14,9 +14,11 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    //头像
     avatar: {
         type: String,
     },
+    //身份标识
     identity: {
         type: String,
         required: true
