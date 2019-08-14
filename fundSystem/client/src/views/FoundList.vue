@@ -149,7 +149,8 @@ export default {
     getProfile() {
       // 获取表格数据
       this.$axios("/api/profiles").then(res => {
-        this.tableData = res.data;
+        console.log(res);
+        // this.tableData = res.data;
         this.allTableData = res.data;
         this.filterTableData = res.data;
         // 设置分页数据
