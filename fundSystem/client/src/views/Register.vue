@@ -2,7 +2,7 @@
   <div class="register">
     <section class="form_container">
       <div class="manage_tip">
-        <span class="title">米修在线后台管理系统</span>
+        <span class="title">TS资金后台管理系统</span>
       </div>
       <el-form
         :model="registerUser"
@@ -26,7 +26,7 @@
         <el-form-item label="选择身份">
           <el-select v-model="registerUser.identity" placeholder="请选择身份">
             <el-option label="管理员" value="manager"></el-option>
-            <el-option label="员工" value="employee"></el-option>
+            <el-option label="个人用户" value="employee"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item>
@@ -95,7 +95,7 @@ export default {
             .then(res => {
               // 注册成功
               this.$message({
-                message: "注册成功！",
+                message: "您已经注册成功！",
                 type: "success"
               });
               this.$router.push("/login");

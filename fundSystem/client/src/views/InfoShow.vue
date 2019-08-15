@@ -14,7 +14,7 @@
                   </div>
                   <div class="user-item">
                     <i class="fa fa-cog"></i>
-                    <span>{{user.identity == 'manager' ? '管理员' : '普通员工'}}</span>
+                    <span>{{user.identity == 'manager' ? '管理员' : '个人用户'}}</span>
                   </div>
                </div>
            </el-col>
@@ -36,7 +36,6 @@ export default {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  /* padding: 16px; */
 }
 .row-bg {
   width: 100%;

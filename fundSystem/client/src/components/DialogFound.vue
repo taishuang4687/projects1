@@ -71,7 +71,8 @@ export default {
         "充值",
         "优惠券",
         "充值礼券",
-        "转账"
+        "转账",
+        "其他"
       ],
       form_rules: {
         describe: [

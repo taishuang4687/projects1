@@ -2,7 +2,7 @@
   <div class="fillcontain">
     <div>
       <el-form :inline="true" ref="search_data" :model="search_data">
-        <el-form-item label="投标时间筛选:">
+        <el-form-item label="分段时间筛选:">
           <el-date-picker v-model="search_data.startTime" type="datetime" placeholder="选择开始时间"></el-date-picker>--
           <el-date-picker v-model="search_data.endTime" type="datetime" placeholder="选择结束时间"></el-date-picker>
         </el-form-item>
